@@ -1,0 +1,548 @@
+/* Картки для друку — одна картка = один файл = один аркуш A4 */
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Unbounded:wght@600;700;800&display=swap');
+
+:root {
+  --ink: #102018;
+  --muted: #3d5a4a;
+  --line: #1f4a35;
+  --accent: #1a7a4c;
+  --paper: #f7faf8;
+  --panel: #e8f2eb;
+  --warn-bg: #fff6e0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #dfe8e3;
+  color: var(--ink);
+  font-family: 'Manrope', Georgia, 'Times New Roman', serif;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+/* ——— Екран ——— */
+.screen-only {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 20px 16px 8px;
+}
+
+.screen-only h1 {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 1.2rem;
+  margin: 0 0 8px;
+}
+
+.screen-only p,
+.screen-only a {
+  color: #24382e;
+}
+
+.card-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0 4px;
+  padding: 0;
+  list-style: none;
+}
+
+.card-nav a {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: #fff;
+  border: 1.5px solid var(--line);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+
+.card-nav a:hover {
+  background: var(--panel);
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 12px 0 8px;
+}
+
+.toolbar button,
+.toolbar a.btn {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.toolbar button.secondary,
+.toolbar a.btn.secondary {
+  background: #fff;
+  color: var(--ink);
+  border: 2px solid var(--line);
+}
+
+.hint {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin: 0 0 16px;
+}
+
+.edit-hint {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 6px 10px;
+  background: var(--warn-bg);
+  border-radius: 8px;
+  font-size: 0.88rem;
+}
+
+/* ——— Один аркуш A4 ——— */
+.sheet {
+  width: 210mm;
+  min-height: 297mm;
+  margin: 0 auto 24px;
+  padding: 12mm;
+  background: #fff;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.sheet.parents {
+  display: block;
+  padding: 14mm 16mm;
+}
+
+.card {
+  width: 100%;
+  max-width: 186mm;
+  min-height: 260mm;
+  padding: 12mm 14mm 10mm;
+  position: relative;
+  background: var(--paper);
+  border: 1.5px solid var(--line);
+  border-radius: 2mm;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-logo {
+  display: block;
+  width: 34mm;
+  height: 34mm;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--line);
+  margin: 0 auto 5mm;
+  background: #fff;
+}
+
+.card-dense .card-logo {
+  width: 28mm;
+  height: 28mm;
+  margin-bottom: 3mm;
+}
+
+.card-dense .card-body {
+  font-size: 11.5pt;
+}
+
+.card-dense .card-body p {
+  margin-bottom: 2.5mm;
+}
+
+.card-dense .lead {
+  font-size: 16pt;
+  margin-bottom: 3mm;
+}
+
+.card-dense .brand-title {
+  font-size: 16pt;
+}
+
+.card-dense .rounds {
+  font-size: 10.5pt;
+  padding: 2.5mm 3mm;
+}
+
+.brand {
+  text-align: center;
+  margin-bottom: 2mm;
+}
+
+.brand-eyebrow {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 10pt;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 2mm;
+}
+
+.brand-title {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 18pt;
+  font-weight: 800;
+  line-height: 1.15;
+  margin: 0 0 1.5mm;
+  color: var(--ink);
+}
+
+.brand-sub {
+  font-size: 11pt;
+  font-weight: 600;
+  color: var(--muted);
+  margin: 0;
+}
+
+.divider {
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent, var(--line), transparent);
+  margin: 4mm 0 5mm;
+  border: none;
+}
+
+.card-heading {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 15pt;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 0 3mm;
+  color: var(--ink);
+}
+
+.card-body {
+  flex: 1;
+  font-size: 12.5pt;
+}
+
+.card-body p {
+  margin: 0 0 3.5mm;
+}
+
+.card-body .lead {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 18pt;
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: 0.02em;
+  margin-bottom: 4mm;
+}
+
+.cipher-quote {
+  margin: 3mm 0 4mm;
+  padding: 3.5mm 4mm;
+  background: var(--panel);
+  border: 1.5px solid var(--line);
+  border-left: 4px solid var(--accent);
+  border-radius: 2mm;
+  font-family: 'Unbounded', sans-serif;
+  font-size: 11pt;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+  color: var(--ink);
+}
+
+.mission-cta {
+  margin-top: 2mm !important;
+  text-align: center;
+  font-size: 12pt;
+}
+
+.mission-cta strong {
+  display: block;
+  margin-top: 2mm;
+  font-family: 'Unbounded', sans-serif;
+  font-size: 12.5pt;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+}
+
+.card-body ol,
+.card-body ul {
+  margin: 0 0 3.5mm;
+  padding-left: 6mm;
+}
+
+.card-body li {
+  margin-bottom: 2.5mm;
+}
+
+.code-box {
+  margin: 3.5mm 0;
+  padding: 3.5mm 4mm;
+  background: var(--panel);
+  border: 1.5px solid var(--line);
+  border-radius: 2mm;
+  text-align: center;
+}
+
+.code-box .label {
+  display: block;
+  font-size: 9.5pt;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 1.5mm;
+}
+
+.code-box .value {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 18pt;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+}
+
+.code-box .value.sm {
+  font-size: 14pt;
+  letter-spacing: 0.08em;
+}
+
+.blank {
+  display: inline-block;
+  min-width: 16mm;
+  border-bottom: 1.5px solid var(--ink);
+  margin: 0 1mm;
+}
+
+.math-list {
+  margin: 2mm 0 3mm;
+  padding: 3mm 3.5mm;
+  background: #fff;
+  border: 1.5px solid var(--line);
+  border-radius: 2mm;
+  list-style: none;
+}
+
+.math-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 2mm;
+  margin: 0 0 2.2mm;
+  font-size: 12pt;
+  font-weight: 600;
+}
+
+.math-list li:last-child {
+  margin-bottom: 0;
+}
+
+.math-list .n {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 9.5pt;
+  font-weight: 800;
+  color: var(--accent);
+  min-width: 7mm;
+}
+
+.math-list .eq {
+  font-family: 'Unbounded', sans-serif;
+  letter-spacing: 0.04em;
+}
+
+.card-dense .math-list li {
+  font-size: 11pt;
+  margin-bottom: 1.6mm;
+}
+
+.card-dense .qr-slot {
+  width: 34mm;
+  height: 34mm;
+  margin: 1.5mm auto 2.5mm;
+}
+
+.qr-slot {
+  width: 42mm;
+  height: 42mm;
+  margin: 2mm auto 4mm;
+  border: 1.5px solid var(--line);
+  border-radius: 2mm;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  padding: 1.5mm;
+}
+
+.qr-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.alphabet {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.2mm 2.5mm;
+  font-size: 11.5pt;
+  font-weight: 600;
+}
+
+.alphabet span {
+  background: #fff;
+  border: 1px solid #b7cfc2;
+  border-radius: 1.2mm;
+  padding: 2mm 1.5mm;
+  text-align: center;
+}
+
+.rounds {
+  margin: 2.5mm 0 0;
+  padding: 3mm 3.5mm;
+  background: #fff;
+  border: 1px solid #b7cfc2;
+  border-radius: 2mm;
+  font-size: 11.5pt;
+}
+
+.rounds strong {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 9.5pt;
+  letter-spacing: 0.04em;
+}
+
+.footer-note {
+  margin-top: auto;
+  padding-top: 4mm;
+  font-size: 9.5pt;
+  color: var(--muted);
+  text-align: center;
+  border-top: 1px solid #c5d6cb;
+}
+
+.card-tag {
+  position: absolute;
+  top: 5mm;
+  right: 6mm;
+  font-size: 8.5pt;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.parents h2 {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 14pt;
+  margin: 0 0 3mm;
+}
+
+.parents h3 {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 11pt;
+  margin: 5mm 0 2mm;
+}
+
+.parents ul {
+  margin: 0;
+  padding-left: 5mm;
+}
+
+.parents li {
+  margin-bottom: 2mm;
+  font-size: 11pt;
+}
+
+.parents table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 10.5pt;
+  margin-top: 2mm;
+}
+
+.parents th,
+.parents td {
+  border: 1px solid #b7cfc2;
+  padding: 2.2mm 2.5mm;
+  text-align: left;
+}
+
+.parents th {
+  background: var(--panel);
+  font-family: 'Unbounded', sans-serif;
+  font-size: 9.5pt;
+}
+
+.do-not-print-kid {
+  background: #fff3f0;
+  border: 1.5px solid #c45c4a;
+  border-radius: 2mm;
+  padding: 2.5mm 3mm;
+  margin-bottom: 4mm;
+  font-weight: 700;
+  font-size: 10.5pt;
+  color: #8a2e22;
+}
+
+[contenteditable='true']:focus {
+  outline: 2px solid #3ecf8e;
+  outline-offset: 2px;
+  background: #fff;
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  html,
+  body {
+    background: #fff;
+    width: 210mm;
+    height: 297mm;
+  }
+
+  .screen-only {
+    display: none !important;
+  }
+
+  .sheet {
+    width: 210mm;
+    height: 297mm;
+    min-height: 297mm;
+    margin: 0;
+    padding: 12mm;
+    box-shadow: none;
+    page-break-after: avoid;
+    break-after: avoid;
+    overflow: hidden;
+  }
+
+  .card {
+    max-width: none;
+    width: 100%;
+    min-height: 0;
+    height: 100%;
+    border-color: #666;
+  }
+
+  [contenteditable='true']:focus {
+    outline: none;
+    background: transparent;
+  }
+}

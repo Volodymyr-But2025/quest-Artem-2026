@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Картка 2 — Стіл</title>
+    <link rel="stylesheet" href="print.css" />
+  </head>
+  <body>
+    <header class="screen-only">
+      <h1>Картка 2 — Стіл (QR + код)</h1>
+      <div class="toolbar">
+        <button type="button" onclick="window.print()">Друкувати / PDF</button>
+        <button type="button" class="secondary" onclick="toggleEdit()">
+          Редагувати
+        </button>
+        <a class="btn secondary" href="index.html">← Усі картки</a>
+      </div>
+      <p class="hint">
+        QR: <code>http://192.168.0.204:5173/</code>. Шифр колеса через приклади
+        → <strong>28 — 1 — 24 — 1</strong> (ШАФА). Відповіді дитині не
+        показувати.
+      </p>
+    </header>
+
+    <main class="sheet">
+      <article class="card card-dense">
+        <span class="card-tag">КАРТКА 2</span>
+        <img class="card-logo" src="assets/logo.jpg" alt="Логотип місії" />
+
+        <div class="brand">
+          <p class="brand-eyebrow" contenteditable="true">Секретний протокол</p>
+          <h2 class="brand-title" contenteditable="true">СИГНАЛ ЗІ СТОЛУ</h2>
+          <p class="brand-sub" contenteditable="true">
+            Активація агентського терміналу
+          </p>
+        </div>
+        <hr class="divider" />
+
+        <div class="card-body" contenteditable="true">
+          <p class="lead">Агенте Артеме!</p>
+
+          <p>
+            Ти знайшов перший секретний сигнал. Тепер активуй термінал і розкрий
+            шифр — числа сховані в прикладах.
+          </p>
+
+          <p>
+            <strong>Крок 1.</strong> Відскануй QR — відкриється агентський
+            термінал.
+          </p>
+
+          <div class="qr-slot" contenteditable="false">
+            <img
+              class="qr-img"
+              src="assets/qr-terminal.png"
+              alt="QR: http://192.168.0.204:5173/"
+              width="400"
+              height="400"
+            />
+          </div>
+
+          <p><strong>Крок 2.</strong> Введи код місії:</p>
+
+          <div class="code-box">
+            <span class="label">Код місії</span>
+            <span class="value">ARTEM2026</span>
+          </div>
+
+          <p>
+            <strong>Крок 3.</strong> Порахуй кожен приклад. Відповіді — це числа
+            шифру (по порядку):
+          </p>
+
+          <ol class="math-list">
+            <li>
+              <span class="n">1)</span>
+              <span class="eq">20 + 8 = <span class="blank">&nbsp;</span></span>
+            </li>
+            <li>
+              <span class="n">2)</span>
+              <span class="eq"
+                >50 ÷ 50 = <span class="blank">&nbsp;</span></span
+              >
+            </li>
+            <li>
+              <span class="n">3)</span>
+              <span class="eq">96 ÷ 4 = <span class="blank">&nbsp;</span></span>
+            </li>
+            <li>
+              <span class="n">4)</span>
+              <span class="eq"
+                >13 − 12 = <span class="blank">&nbsp;</span></span
+              >
+            </li>
+          </ol>
+
+          <p>
+            Введи отримані числа в полі шифру в терміналі. Коли з’явиться слово
+            — йди туди, де чекає наступний конверт.
+          </p>
+
+          <p class="mission-cta">
+            Рахуй точно. Кожне число — частина секрету.
+            <strong>Порахуй. Розшифруй. Рухайся далі!</strong>
+          </p>
+        </div>
+
+        <p class="footer-note">Агентський термінал · доступ для найкмітливіших</p>
+      </article>
+    </main>
+
+    <script src="common.js"></script>
+  </body>
+</html>

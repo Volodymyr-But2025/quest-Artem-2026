@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Картка 1 — Старт</title>
+    <link rel="stylesheet" href="print.css" />
+  </head>
+  <body>
+    <header class="screen-only">
+      <h1>Картка 1 — Старт</h1>
+      <div class="toolbar">
+        <button type="button" onclick="window.print()">Друкувати / PDF</button>
+        <button type="button" class="secondary" onclick="toggleEdit()">
+          Редагувати
+        </button>
+        <a class="btn secondary" href="index.html">← Усі картки</a>
+      </div>
+      <p class="hint">
+        Один аркуш A4. Текст можна правити в браузері або в цьому файлі.
+      </p>
+    </header>
+
+    <main class="sheet">
+      <article class="card">
+        <span class="card-tag">КАРТКА 1</span>
+        <img class="card-logo" src="assets/logo.jpg" alt="Логотип місії" />
+
+        <div class="brand">
+          <p class="brand-eyebrow" contenteditable="true">Секретний протокол</p>
+          <h2 class="brand-title" contenteditable="true">АГЕНТСЬКА МІСІЯ</h2>
+          <p class="brand-sub" contenteditable="true">
+            Спеціальне завдання для агента Артема
+          </p>
+        </div>
+        <hr class="divider" />
+
+        <div class="card-body" contenteditable="true">
+          <p class="lead">Агенте Артеме!</p>
+
+          <p>
+            Якщо ти читаєш це повідомлення — саме тебе обрала секретна служба
+            для надважливого завдання.
+          </p>
+
+          <p>
+            На тебе чекає місія, з якою впорається далеко не кожен. Попереду —
+            таємні сигнали, хитрі шифри та випробування на уважність,
+            кмітливість і сміливість.
+          </p>
+
+          <p>
+            Але ми знаємо, чому обрали саме тебе. Ти — крутий агент: не боїшся
+            труднощів, знаходиш вихід зі складних ситуацій і ніколи не здаєшся
+            перед першою перешкодою!
+          </p>
+
+          <p>Твій агентський термінал уже чекає на активацію.</p>
+
+          <p>
+            Та перш ніж розпочати місію, знайди
+            <strong>перший секретний сигнал</strong>. Його місце зашифроване в
+            цій підказці. Іноді потрібно починати з кінця:
+          </p>
+
+          <blockquote class="cipher-quote">
+            «Нів ясьтєавох мат, ед ьтувиж икжинк, ьтажел итишоз й ьтюакеч ан
+            ебет іншамод яннадваз.»
+          </blockquote>
+
+          <p class="mission-cta">
+            Знайди сигнал! Найкращі агенти не чекають на легкі завдання — вони
+            виконують неможливі.
+            <strong>Місія почалася. Дій!</strong>
+          </p>
+        </div>
+
+        <p class="footer-note">Агентський термінал · доступ для найсміливіших</p>
+      </article>
+    </main>
+
+    <script src="common.js"></script>
+  </body>
+</html>

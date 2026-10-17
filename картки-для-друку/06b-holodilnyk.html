@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Батьки — Холодильник (стікери)</title>
+    <link rel="stylesheet" href="print.css" />
+  </head>
+  <body>
+    <header class="screen-only">
+      <h1>Батьки — Холодильник (стікери)</h1>
+      <div class="toolbar">
+        <button type="button" onclick="window.print()">Друкувати / PDF</button>
+        <button type="button" class="secondary" onclick="toggleEdit()">Редагувати</button>
+        <a class="btn secondary" href="index.html">← Усі картки</a>
+      </div>
+      <p class="hint">Лише для батьків. Дитині не віддавати — на холодильнику лише стікери.</p>
+    </header>
+
+    <main class="sheet parents">
+      <p class="do-not-print-kid">⚠ ЛИШЕ ДЛЯ БАТЬКІВ — дитині не віддавати</p>
+      <img
+        class="card-logo"
+        src="assets/logo.jpg"
+        alt="Логотип місії"
+        style="width: 22mm; height: 22mm; margin-bottom: 3mm"
+      />
+      <h2>Замок B — розкладка стікерів</h2>
+      <div class="card-body" contenteditable="true">
+        <p>
+          Картки 6B для дитини більше немає. На холодильник клеїш три стікери
+          (порядок зчитування на екрані: <strong>Верх → Середина → Низ</strong>).
+        </p>
+        <ul>
+          <li><strong>Верх</strong> — стікер <code>1</code></li>
+          <li><strong>Середина</strong> — стікер <code>2</code></li>
+          <li><strong>Низ</strong> — стікер <code>8</code></li>
+        </ul>
+        <p>Код у терміналі: <strong>128</strong></p>
+        <p>
+          Якщо клеїш інші цифри — зміни <code>safeB</code> у коді терміналу
+          під свої стікери.
+        </p>
+      </div>
+    </main>
+
+    <script src="common.js"></script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Батьки — Чеклист</title>
+    <link rel="stylesheet" href="print.css" />
+  </head>
+  <body>
+    <header class="screen-only">
+      <h1>Батьки — Чеклист розкладки</h1>
+      <div class="toolbar">
+        <button type="button" onclick="window.print()">Друкувати / PDF</button>
+        <button type="button" class="secondary" onclick="toggleEdit()">Редагувати</button>
+        <a class="btn secondary" href="index.html">← Усі картки</a>
+      </div>
+      <p class="hint">Дитині не віддавати.</p>
+    </header>
+
+    <main class="sheet parents">
+      <p class="do-not-print-kid">⚠ ЛИШЕ ДЛЯ БАТЬКІВ — дитині не віддавати</p>
+      <img
+        class="card-logo"
+        src="assets/logo.jpg"
+        alt="Логотип місії"
+        style="width: 22mm; height: 22mm; margin-bottom: 3mm"
+      />
+      <h2>Чеклист розкладки</h2>
+      <ul contenteditable="true">
+        <li><strong>В руки Артему</strong> — картка 1 (загадка про стіл)</li>
+        <li><strong>Стіл</strong> — картка 2 (QR + ARTEM2026 + шифр 28-1-24-1)</li>
+        <li><strong>Шафа</strong> — картка 3 (шифр + алфавіт на звороті)</li>
+        <li><strong>Під / біля піаніно</strong> — картка 4</li>
+        <li><strong>Сходи / квіти</strong> — картка 5</li>
+        <li><strong>Кухня</strong> — картка 6 (потрійний сейф)</li>
+        <li>
+          <strong>Крупи</strong> — стікери 7 / 3 / 9 на рис / горох / гречка
+          (порядок → 739)
+        </li>
+        <li>
+          <strong>Холодильник</strong> — стікери 1 верх, 2 середина, 8 низ
+          (без картки для дитини)
+        </li>
+        <li><strong>Шухляда</strong> — картка 6C (67 × □, □ = сигнал 5)</li>
+        <li><strong>Скарб</strong> — там, де спить Матвій</li>
+        <li><strong>QR</strong> — на картці 2 веде на URL терміналу</li>
+        <li><strong>Телефон</strong> — заряд, звук увімкнено</li>
+      </ul>
+    </main>
+
+    <script src="common.js"></script>
+  </body>
+</html>
